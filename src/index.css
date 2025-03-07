@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: var(--color-amber-50);
+    --color-background-secondary: var(--color-red-200);
+    --color-primary: var(--color-slate-950);
+    --color-secondary: var(--color-gray-500);
+    --color-terciary: var(--color-gray-400);
+    --color-accent: var(--color-amber-700);
+    --color-danger: var(--color-red-500);
+    --color-h-danger: var(--color-red-700);
+    --color-light: white;
+}
+
+@layer components {
+    .button {
+        @apply flex bg-primary hover:bg-accent hover:scale-105 hover:shadow-lg text-light font-bold py-2 px-4 rounded-lg;
+    }
+
+    .spinner {
+        @apply w-24 h-24 border-8 border-accent border-t-transparent rounded-full animate-spin mb-4;
+    }
+
+    .input {
+        @apply text-primary py-2 border-b-2 w-full outline-none border-primary;
+    }
+
+    .card {
+        @apply bg-background-secondary px-8 rounded-lg shadow-lg py-4 flex flex-col items-center justify-center;
+    }
+
+    .responsive-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+    }
+}
